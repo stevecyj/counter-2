@@ -5,5 +5,6 @@ import { render } from 'react-dom';
 import Input from './Input';
 import Child from './Child';
 import Parent from './Parent';
+import Demo from './Demo';
 
-render(<Parent />, document.getElementById('root'));
+render(<Demo />, document.getElementById('root'));
