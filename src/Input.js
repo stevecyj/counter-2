@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 
 class Input extends Component {
+    myInput = createRef();
+
     componentDidMount() {
-        this.myInput.focus();
+        this.myInput.current.focus();
     }
 
     setRef = input => {
@@ -12,7 +14,7 @@ class Input extends Component {
         return (
             <div>
                 <h3>Enter your name</h3>
-                <input text="text" ref={this.setRef} />
+                <input text="text" ref={this.myInput} />
             </div>
         );
     }
