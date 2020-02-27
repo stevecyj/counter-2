@@ -3,5 +3,7 @@ import { render } from 'react-dom';
 
 // import Counter from './Counter';
 import Input from './Input';
+import Child from './Child';
+import Parent from './Parent';
 
-render(<Input />, document.getElementById('root'));
+render(<Parent />, document.getElementById('root'));
