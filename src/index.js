@@ -7,5 +7,6 @@ import Child from './Child';
 import Parent from './Parent';
 import Demo from './Demo';
 import Counter from './Counter';
+import FetchUseEffect from './FetchUseEffect';
 
-render(<Counter />, document.getElementById('root'));
+render(<FetchUseEffect />, document.getElementById('root'));
