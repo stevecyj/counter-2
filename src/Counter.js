@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import PropTypes from 'prop-types';
 
-class Counter extends Component {
+const Counter = () => {
     // static defaultProps = {
     //     initCount: 5
     // };
@@ -9,46 +9,51 @@ class Counter extends Component {
     // static propTypes = {
     //     initCount: PropTypes.number
     // };
-    constructor(props) {
-        super(props);
-        this.state = {
-            count: props.initCount
-        };
-    }
-    state = {
-        count: 0
+
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         count: props.initCount
+    //     };
+    // }
+    // state = {
+    //     count: 0
+    // };
+
+    // addCount = () => {
+    //     this.setState(state => ({
+    //         count: state.count + 1
+    //     }));
+
+    //     this.setState(state => ({
+    //         count: state.count + 1
+    //     }));
+
+    //     this.setState(state => ({
+    //         count: state.count + 1
+    //     }));
+    // };
+
+    const [count, setCount] = useState(0);
+    const addCount = () => {
+        // setCount(count + 1);
+        setCount(c => c + 1);
     };
 
-    addCount = () => {
-        this.setState(state => ({
-            count: state.count + 1
-        }));
-
-        this.setState(state => ({
-            count: state.count + 1
-        }));
-
-        this.setState(state => ({
-            count: state.count + 1
-        }));
-    };
-
-    render() {
-        return (
-            <div>
-                <h1>{this.state.count}</h1>
-                <button onClick={this.addCount}>+1</button>
-            </div>
-        );
-    }
-}
-
-Counter.defaultProps = {
-    initCount: 5
+    return (
+        <div>
+            <h1>{count}</h1>
+            <button onClick={addCount}>+1</button>
+        </div>
+    );
 };
 
-Counter.propTypes = {
-    initCount: PropTypes.number
-};
+// Counter.defaultProps = {
+//     initCount: 5
+// };
+
+// Counter.propTypes = {
+//     initCount: PropTypes.number
+// };
 
 export default Counter;

@@ -6,5 +6,6 @@ import Input from './Input';
 import Child from './Child';
 import Parent from './Parent';
 import Demo from './Demo';
+import Counter from './Counter';
 
-render(<Demo />, document.getElementById('root'));
+render(<Counter />, document.getElementById('root'));
